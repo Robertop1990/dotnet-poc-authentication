@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "b6db2576-a5d4-403a-890c-e5bdaf1d5efa",
+		"name": "Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37156907"
+	},
+	"item": [
+		{
+			"name": "Obtener Token Jwt",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"robert\",\n    \"password\": \"robert#$\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44389/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener Token Jwt",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"robert\",\n    \"password\": \"robert#$\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44389/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44389",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Autenticacion con Jwt",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmVydCIsIm5iZiI6MTc0MjQ5NTMzMywiZXhwIjoxNzQyNDk4OTMzLCJpYXQiOjE3NDI0OTUzMzN9.ZmEItKLHBfNRDo--5OUcB4IR4dGsNWi06WQsyzeySrY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44389/api/jwt",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"jwt"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Autenticacion con Jwt",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmVydCIsIm5iZiI6MTc0MjQ5NTMzMywiZXhwIjoxNzQyNDk4OTMzLCJpYXQiOjE3NDI0OTUzMzN9.ZmEItKLHBfNRDo--5OUcB4IR4dGsNWi06WQsyzeySrY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44389/api/jwt",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44389",
+							"path": [
+								"api",
+								"jwt"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Autenticacion con ApiKey",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "x-api-key",
+						"value": "12345678",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44389/api/apikey",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"apikey"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Autenticacion con ApiKey Exitoso",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "x-api-key",
+								"value": "12345678",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44389/api/apikey",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44389",
+							"path": [
+								"api",
+								"apikey"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Autenticacion con ApiKey No Exitoso",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "x-api-key",
+								"value": "12345678",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44389/api/apikey",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44389",
+							"path": [
+								"api",
+								"apikey"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
